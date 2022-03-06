@@ -1,9 +1,10 @@
 <?php
+//admin giriş ve veritabanı ?>
+<?php
 include_once 'dbConnection.php';
 $ref=@$_GET['q'];
 $email = $_POST['uname'];
 $password = $_POST['password'];
-
 $email = stripslashes($email);
 $email = addslashes($email);
 $password = stripslashes($password); 

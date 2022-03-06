@@ -31,8 +31,9 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 <div class="col-lg-6">
 <span class="logo">Test Sistemi</span></div>
 <div class="col-md-2 col-md-offset-4">
+  
 <a href="#" class="pull-right btn sub1" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp;<span class="title1"><b>Giriş</b></span></a></div>
-<!--sign in modal start-->
+<!--oturum açma modülü-->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
@@ -45,7 +46,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 <fieldset>
 
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-3 control-label" for="email"></label>  
   <div class="col-md-6">
@@ -55,7 +56,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </div>
 
 
-<!-- Password input-->
+<!-- Password girişi-->
 <div class="form-group">
   <label class="col-md-3 control-label" for="password"></label>
   <div class="col-md-6">
@@ -74,9 +75,9 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!--sign in modal closed-->
+<!--oturum açma bitiş-->
 
-</div><!--header row closed-->
+</div><!--başlık satırı kapatılır-->
 </div>
 
 <div class="bg1">
@@ -84,12 +85,12 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 
 <div class="col-md-7"></div>
 <div class="col-md-4 panel">
-<!-- sign in form begins -->  
+<!-- kayıt olma formu başlar -->  
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
 
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
@@ -98,7 +99,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="gender"></label>
   <div class="col-md-12">
@@ -109,7 +110,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="name"></label>  
   <div class="col-md-12">
@@ -119,7 +120,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </div>
 
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label title1" for="email"></label>
   <div class="col-md-12">
@@ -128,7 +129,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
   </div>
 </div>
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="mob"></label>  
   <div class="col-md-12">
@@ -138,7 +139,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </div>
 
 
-<!-- Text input-->
+<!-- Text giriş-->
 <div class="form-group">
   <label class="col-md-12 control-label" for="password"></label>
   <div class="col-md-12">
@@ -156,7 +157,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </div>
 <?php if(@$_GET['q7'])
 { echo'<p style="color:red;font-size:15px;">'.@$_GET['q7'];}?>
-<!-- Button -->
+<!-- Kayıt ol buton -->
 <div class="form-group">
   <label class="col-md-12 control-label" for=""></label>
   <div class="col-md-12"> 
@@ -166,11 +167,11 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 
 </fieldset>
 </form>
-</div><!--col-md-6 end-->
+</div>
 </div></div>
-</div><!--container end-->
+</div><!--container son-->
 
-<!--Footer start-->
+<!--Footer başla-->
 <div class="row footer">
 <div class="col-md-3 box">
 <a href="https://www.facebook.com/musathan07" target="_blank">Hakkımda</a>
@@ -182,7 +183,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </div>
 <div class="col-md-3 box">
 <a href="feedback.php" target="_blank">Geridönüş</a></div></div>
-<!-- Modal For Developers-->
+<!-- geliştirici için modal-->
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -199,17 +200,17 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 		 </div>
 		 <div class="col-md-5">
 		<a href="https://www.facebook.com/musathan07" style="color:#202020; font-family:'typo' ; font-size:18px" title="Facebookta Bul">Mustafa Gülcan</a>
-		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+905398211139</h4>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+905374544554</h4>
 		<h4 style="font-family:'typo' ">musfatmin@gmail.com</h4>
 		<h4 style="font-family:'typo' ">Alanya,ANTALYA</h4></div></div>
 		</p>
       </div>
     
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
 
-<!--Modal for admin login-->
+<!--admin girişi için modal-->
 	 <div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -234,14 +235,10 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Parolalar ayn
 </form>
 </div><div class="col-md-3"></div></div>
       </div>
-      <!--<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
-      </div>-->
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--footer end-->
-
-
+      
+    </div>
+  </div>
+</div>
+<!--footer bit-->
 </body>
 </html>

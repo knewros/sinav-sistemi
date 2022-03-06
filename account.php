@@ -14,11 +14,11 @@
  
   <script src="js/bootstrap.min.js"  type="text/javascript"></script>
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
- <!--alert message-->
+ <!--uyarı mesajı-->
 <?php if(@$_GET['w'])
 {echo'<script>alert("'.@$_GET['w'].'");</script>';}
 ?>
-<!--alert message end-->
+<!--uyarı mesajı son-->
 
 </head>
 <?php
@@ -49,10 +49,10 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 </div></div>
 <div class="bg">
 
-<!--navigation menu-->
+<!--navigatn menu-->
 <nav class="navbar navbar-default title1">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- mobil menü için -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -63,7 +63,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
       <a class="navbar-brand" href="#"><b></b></a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- geçişler için bağlantı ve formları toplama -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li <?php if(@$_GET['q']==1) echo'class="active"'; ?> ><a href="account.php?q=1"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Anasayfa<span class="sr-only">(current)</span></a></li>
@@ -75,14 +75,14 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
         </div>
         <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;Ara</button>
       </form>
-      </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav><!--navigation menu closed-->
-<div class="container"><!--container start-->
+      </div><!-- /.çubuj daraltma -->
+  </div>
+</nav><!--navigatn menü kapat-->
+<div class="container"><!--container başlangıcı-->
 <div class="row">
 <div class="col-md-12">
 
-<!--home start-->
+<!--anasayfa başla-->
 <?php if(@$_GET['q']==1) {
 
 $result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
@@ -111,29 +111,8 @@ $c=0;
 echo '</table></div>';
 
 }?>
-<!--<span id="countdown" class="timer"></span>
-<script>
-var seconds = 40;
-    function secondPassed() {
-    var minutes = Math.round((seconds - 30)/60);
-    var remainingSeconds = seconds % 60;
-    if (remainingSeconds < 10) {
-        remainingSeconds = "0" + remainingSeconds; 
-    }
-    document.getElementById('countdown').innerHTML = minutes + ":" +    remainingSeconds;
-    if (seconds == 0) {
-        clearInterval(countdownTimer);
-        document.getElementById('countdown').innerHTML = "Buzz Buzz";
-    } else {    
-        seconds--;
-    }
-    }
-var countdownTimer = setInterval('secondPassed()', 1000);
-</script>-->
 
-<!--home closed-->
-
-<!--quiz start-->
+<!--sınav başla-->
 <?php
 if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
 $eid=@$_GET['eid'];
@@ -158,9 +137,8 @@ $optionid=$row['optionid'];
 echo'<input type="radio" name="ans" value="'.$optionid.'">'.$option.'<br /><br />';
 }
 echo'<br /><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>&nbsp;Gönder</button></form></div>';
-//header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
-//result display
+//sonuç ekranı
 if(@$_GET['q']== 'result' && @$_GET['eid']) 
 {
 $eid=@$_GET['eid'];
@@ -189,9 +167,9 @@ echo '</table></div>';
 
 }
 ?>
-<!--quiz end-->
+<!--sınav bitir-->
 <?php
-//history start
+//history başla
 if(@$_GET['q']== 2) 
 {
 $q=mysqli_query($con,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " )or die('Error197');
@@ -217,7 +195,7 @@ echo '<tr><td>'.$c.'</td><td>'.$title.'</td><td>'.$qa.'</td><td>'.$r.'</td><td>'
 echo'</table></div>';
 }
 
-//ranking start
+//sıralama başla
 if(@$_GET['q']== 3) 
 {
 $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY skor DESC " )or die('Error223');
@@ -241,10 +219,8 @@ echo '<tr><td style="color:#99cc32"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$g
 }
 echo '</table></div>';}
 ?>
-
-
-
 </div></div></div></div>
+
 <!--Footer start-->
 <div class="row footer">
 <div class="col-md-3 box">
@@ -257,7 +233,7 @@ echo '</table></div>';}
 </div>
 <div class="col-md-3 box">
 <a href="feedback.php" target="_blank">Geridönüş</a></div></div>
-<!-- Modal For Developers-->
+<!-- geliştirici için modal-->
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -274,17 +250,17 @@ echo '</table></div>';}
 		 </div>
 		 <div class="col-md-5">
 		<a href="https://www.facebook.com/musathan07" style="color:#202020; font-family:'typo' ; font-size:18px" title="Facebookta Bul">Mustafa Gülcan</a>
-		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+905398211139</h4>
+		<h4 style="color:#202020; font-family:'typo' ;font-size:16px" class="title1">+905374545447</h4>
 		<h4 style="font-family:'typo' ">musfatmin@gmail.com</h4>
 		<h4 style="font-family:'typo' ">Alanya,ANTALYA</h4></div></div>
 		</p>
       </div>
     
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
 
-<!--Modal for admin login-->
+<!--admin için modal-->
 	 <div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -309,14 +285,10 @@ echo '</table></div>';}
 </form>
 </div><div class="col-md-3"></div></div>
       </div>
-      <!--<div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>-->
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--footer end-->
-
-
+      
+    </div>
+  </div>
+</div>
+<!--footer bitş-->
 </body>
 </html>

@@ -25,6 +25,4 @@ header("location:account.php?q=1");
 }
 else
 header("location:$ref?w=Yanlış e-mail ya da parola");
-
-
 ?>

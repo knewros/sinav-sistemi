@@ -11,17 +11,17 @@
 
   <script src="js/bootstrap.min.js"  type="text/javascript"></script>
  	<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-	<!--alert message-->
+	<!--uyarı mesajı-->
 <?php if(@$_GET['w'])
 {echo'<script>alert("'.@$_GET['w'].'");</script>';}
 ?>
-<!--alert message end-->
+<!--uyarı son-->
 
 </head>
 
 <body>
 
-<!--header start-->
+<!--header-->
 <div class="row header">
 <div class="col-lg-6">
 <span class="logo">Test Sistemi</span></div>
@@ -41,7 +41,7 @@ echo '<a href="logout.php?q=feedback.php" class="pull-right sub1 btn title3"><sp
 <a href="index.php" class="pull-right btn sub1 title3"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Anasayfa</a>&nbsp;
 </div></div>
 
-<!--sign in modal start-->
+<!--oturum açma modülü başlangıcı-->
 <div class="modal fade" id="myModal">
   <div class="modal-dialog">
     <div class="modal-content title1">
@@ -54,7 +54,7 @@ echo '<a href="logout.php?q=feedback.php" class="pull-right sub1 btn title3"><sp
 <fieldset>
 
 
-<!-- Text input-->
+<!-- text girişi-->
 <div class="form-group">
   <label class="col-md-3 control-label" for="email"></label>  
   <div class="col-md-6">
@@ -63,7 +63,7 @@ echo '<a href="logout.php?q=feedback.php" class="pull-right sub1 btn title3"><sp
   </div>
 </div>
 
-<!-- Password input-->
+<!-- Password girişi-->
 <div class="form-group">
   <label class="col-md-3 control-label" for="password"></label>
   <div class="col-md-6">
@@ -79,17 +79,17 @@ echo '<a href="logout.php?q=feedback.php" class="pull-right sub1 btn title3"><sp
 		</fieldset>
 </form>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--sign in modal closed-->
+    </div>
+  </div>
+</div>
+<!--oturum modülü sonu-->
 
-<!--header end-->
+<!--header son-->
 
 <div class="bg1">
 <div class="row">
 <div class="col-md-3"></div>
-<div class="col-md-6 panel" style="background-image:url(image/bg1.jpeg); min-height:430px;">
+<div class="col-md-6 panel" style="background-image:url(image/bg1.jpg); min-height:430px;">
 <h2 align="center" style="font-family:'typo'; color:#000066">GERİDÖNÜŞ/ÖNERİ</h2>
 <div style="font-size:14px">
 <?php if(@$_GET['q'])echo '<span style="font-size:18px;"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;'.@$_GET['q'].'</span>';
@@ -132,13 +132,13 @@ Geri bildiriminizi aşağıdaki e-postaya manuel olarak gönderebilirsiniz!:<br 
 <input type="submit" name="submit" value="Gönder" class="btn btn-primary" />
 </div>
 </form>';}?>
-</div><!--col-md-6 end-->
+</div>
 <div class="col-md-3"></div></div>
 </div></div>
-</div><!--container end-->
+</div>
 
 
-<!--Footer start-->
+<!--Footer başla-->
 <div class="row footer">
 <div class="col-md-3 box">
 <a href="https://www.facebook.com/musathan07" target="_blank">Hakkımda</a>
@@ -151,7 +151,7 @@ Geri bildiriminizi aşağıdaki e-postaya manuel olarak gönderebilirsiniz!:<br 
 </div>
 <div class="col-md-3 box">
 <a href="feedback.php" target="_blank">Geridönüş</a></div></div>
-<!-- Modal For Developers-->
+<!-- geliştirici modülü-->
 <div class="modal fade title1" id="developers">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -174,11 +174,11 @@ Geri bildiriminizi aşağıdaki e-postaya manuel olarak gönderebilirsiniz!:<br 
 		</p>
       </div>
     
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
 
-<!--Modal for admin login-->
+<!--admin için modal-->
 	 <div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -203,14 +203,12 @@ Geri bildiriminizi aşağıdaki e-postaya manuel olarak gönderebilirsiniz!:<br 
 </form>
 </div><div class="col-md-3"></div></div>
       </div>
-      <!--<div class="modal-footer">
+      
         <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
       </div>-->
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-<!--footer end-->
-
-
+    </div>
+  </div>
+</div>
+<!--footer son-->
 </body>
 </html>

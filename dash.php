@@ -53,12 +53,12 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
 }?>
 
 </div></div>
-<!-- admin start-->
+<!-- admine giriş-->
 
-<!--navigation menu-->
+<!--navigatn menü-->
 <nav class="navbar navbar-default title1">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    <!-- mobil daraltma için -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -68,7 +68,7 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
       </button>
       <a class="navbar-brand" href="dash.php?q=0"><b></b></a>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- bağlantıları ve form verilerini toplama -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li <?php if(@$_GET['q']==0) echo'class="active"'; ?>><a href="dash.php?q=0">Anasayfa<span class="sr-only">(current)</span></a></li>
@@ -83,14 +83,14 @@ echo '<span class="pull-right top title1" ><span class="log1"><span class="glyph
           </ul>
         </li>
       </ul>
-          </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+          </div><!-- /.navbar daraltma -->
+  </div>
 </nav>
-<!--navigation menu closed-->
-<div class="container"><!--container start-->
+<!--navigatn menu kapatma-->
+<div class="container">
 <div class="row">
 <div class="col-md-12">
-<!--home start-->
+<!--ana sayfa başla-->
 
 <?php if(@$_GET['q']==0) {
 
@@ -121,7 +121,7 @@ echo '</table></div>';
 
 }
 
-//ranking start
+//siralamaya basla
 if(@$_GET['q']== 2) 
 {
 $q=mysqli_query($con,"SELECT * FROM rank  ORDER BY skor DESC " )or die('Error223');
@@ -146,10 +146,9 @@ echo '<tr><td style="color:#99cc32"><b>'.$c.'</b></td><td>'.$name.'</td><td>'.$g
 echo '</table></div>';}
 
 ?>
+<!--anasayfa kapat-->
 
-
-<!--home closed-->
-<!--users start-->
+<!--kullanıcı başlat-->
 <?php if(@$_GET['q']==1) {
 
 $result = mysqli_query($con,"SELECT * FROM user") or die('Error');
@@ -170,9 +169,9 @@ $c=0;
 echo '</table></div>';
 
 }?>
-<!--user end-->
+<!--kullanıcı son-->
 
-<!--feedback start-->
+<!--feedback basla-->
 <?php if(@$_GET['q']==3) {
 $result = mysqli_query($con,"SELECT * FROM `feedback` ORDER BY `feedback`.`date` DESC") or die('Error');
 echo  '<div class="panel"><table class="table table-striped title1">
@@ -196,9 +195,9 @@ while($row = mysqli_fetch_array($result)) {
 echo '</table></div>';
 }
 ?>
-<!--feedback closed-->
+<!--feedback kapat-->
 
-<!--feedback reading portion start-->
+<!--feedback okuma başlangıcı-->
 <?php if(@$_GET['fid']) {
 echo '<br />';
 $id=@$_GET['fid'];
@@ -213,11 +212,11 @@ while($row = mysqli_fetch_array($result)) {
 	
 echo '<div class="panel"<a title="Arşive Dön" href="update.php?q1=2"><b><span class="glyphicon glyphicon-level-up" aria-hidden="true"></span></b></a><h2 style="text-align:center; margin-top:-15px;font-family: "Ubuntu", sans-serif;"><b>'.$konu.'</b></h1>';
  echo '<div class="mCustomScrollbar" data-mcs-theme="dark" style="margin-left:10px;margin-right:10px; max-height:450px; line-height:35px;padding:5px;"><span style="line-height:35px;padding:5px;">-&nbsp;<b>TARİH:</b>&nbsp;'.$date.'</span>
-<span style="line-height:35px;padding:5px;">&nbsp;<b>Saat:</b>&nbsp;'.$time.'</span><span style="line-height:35px;padding:5px;">&nbsp;<b>By:</b>&nbsp;'.$name.'</span><br />'.$feedback.'</div></div>';}
+<span style="line-height:35px;padding:5px;">&nbsp;<b>Saat:</b>&nbsp;'.$time.'</span><span style="line-height:35px;padding:5px;">&nbsp;<b>Gönderen:</b>&nbsp;'.$name.'</span><br />'.$feedback.'</div></div>';}
 }?>
-<!--Feedback reading portion closed-->
+<!--Feedback okuma sonu-->
 
-<!--add quiz start-->
+<!--sınav ekleme başlangıcı-->
 <?php
 if(@$_GET['q']==4 && !(@$_GET['step']) ) {
 echo ' 
@@ -307,9 +306,9 @@ echo '
 
 }
 ?>
-<!--add quiz end-->
+<!--sınav ekleme bitirme-->
 
-<!--add quiz step2 start-->
+<!--sınav ekleme soru detayları başlangıcı-->
 <?php
 if(@$_GET['q']==4 && (@$_GET['step'])==2 ) {
 echo ' 
@@ -383,9 +382,9 @@ echo '<div class="form-group">
 
 
 }
-?><!--add quiz step 2 end-->
+?><!--soru detayları ekleme sonu-->
 
-<!--remove quiz-->
+<!--sınav kaldırma-->
 <?php if(@$_GET['q']==5) {
 
 $result = mysqli_query($con,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
@@ -406,9 +405,7 @@ echo '</table></div>';
 
 }
 ?>
-
-
-</div><!--container closed-->
+</div>
 </div></div>
 </body>
 </html>

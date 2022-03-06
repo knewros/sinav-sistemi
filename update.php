@@ -2,7 +2,7 @@
 include_once 'dbConnection.php';
 session_start();
 $email=$_SESSION['email'];
-//delete feedback
+//feedback silme
 if(isset($_SESSION['key'])){
 if(@$_GET['fdid'] && $_SESSION['key']=='musat7') {
 $id=@$_GET['fdid'];
@@ -11,7 +11,7 @@ header("location:dash.php?q=3");
 }
 }
 
-//delete user
+//kullanıcı silme
 if(isset($_SESSION['key'])){
 if(@$_GET['demail'] && $_SESSION['key']=='musat7') {
 $demail=@$_GET['demail'];
@@ -21,7 +21,7 @@ $result = mysqli_query($con,"DELETE FROM user WHERE email='$demail' ") or die('E
 header("location:dash.php?q=1");
 }
 }
-//remove quiz
+//sinav silme
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='musat7') {
 $eid=@$_GET['eid'];
@@ -39,7 +39,7 @@ header("location:dash.php?q=5");
 }
 }
 
-//add quiz
+//sınav ekleme
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='musat7') {
 $name = $_POST['name'];
@@ -57,7 +57,7 @@ header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 }
 
-//add question
+//soru ekleme
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'addqns' && $_SESSION['key']=='musat7') {
 $n=@$_GET['n'];
@@ -108,7 +108,7 @@ header("location:dash.php?q=0");
 }
 }
 
-//quiz start
+//sınav başlatma
 if(@$_GET['q']== 'quiz' && @$_GET['step']== 2) {
 $eid=@$_GET['eid'];
 $sn=@$_GET['n'];
@@ -200,7 +200,7 @@ header("location:account.php?q=result&eid=$eid");
 }
 }
 
-//restart quiz
+//tekrar sınavı başlatma
 if(@$_GET['q']== 'quizre' && @$_GET['step']== 25 ) {
 $eid=@$_GET['eid'];
 $n=@$_GET['n'];
